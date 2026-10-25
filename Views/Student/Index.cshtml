@@ -1,0 +1,30 @@
+﻿@model List<Sarah10415_MVC.Models.Student>
+
+
+<table cellpadding="0" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Student Name</th>
+            <th>Student-ID</th>
+            <th> Delete </th>
+           
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var student in Model)
+        {
+        <tr>
+            <td valign="middle" data-header-title="Date"><span>@student.studentID</span></td>
+            <td valign="middle" data-header-title="Price"><a href=" /Student/GetDetails/@student.studentID">@student.studentName</a></td>
+            <td valign="middle" data-header-title="Supplement">@student.studentNo</td>
+            <td><a href="/Student/DeleteStudent/@student.studentID" style="color: firebrick"
+                   onclick="return confirm('Are you sure you want to delete it ?');">Delete</a></td>
+
+        </tr>
+        }
+
+
+    </tbody>
+</table>

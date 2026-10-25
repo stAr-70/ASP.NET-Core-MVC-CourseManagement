@@ -1,0 +1,16 @@
+﻿<h4>Add new room </h4>
+
+
+@using (Html.BeginForm("InsertRoom", "Room", FormMethod.Post))
+{
+    <label for="fname">Room name</label>
+    <input type="text" name="roomName">
+    <label for="lname">Room size</label>
+    <input type="text" name="roomSize">
+    <label for="lname">Room location</label>
+    <input type="text" name="location">
+
+    <input type="submit" value="Add room" class="button" />
+
+}
+

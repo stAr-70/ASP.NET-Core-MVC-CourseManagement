@@ -1,0 +1,51 @@
+﻿
+@model List<Sarah10415_MVC.Models.Room>
+
+@Styles.Render("~/MyDesign")
+
+@foreach (var room in Model)                                                   
+{
+
+    <div class="container">
+        
+        <div id="products" class="row list-group">
+
+
+            <div class="item  col-xs-4 col-lg-4">
+                <div class="thumbnail">
+                    <img class="group list-group-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtzpQmsWv7kwRdtWQhjInEGSsrdBxLTDXe8w&s" alt="Location icon" />
+                    <div class="caption">
+                        <h4 class="group inner list-group-item-heading">
+                           @room.roomName
+                        </h4>
+                        <p class="group inner list-group-item-text">
+                            @room.location
+                        </p>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">
+                                    @room.roomSize
+                                </p>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+
+                                @*@Html.ActionLink("Details", "GetDetails",new { @id=item.roomID},new { @class = "btn btn-success" })*@
+
+                                <a class="btn btn-info" href="/Room/GetDetails/@room.roomID">Details</a>
+
+                                <a class="btn btn-warning" href="/Room/DeleteRoom/@room.roomID"
+                                   onclick="return confirm('Are you sure you want to delete it ?');">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+
+}
+
+
+

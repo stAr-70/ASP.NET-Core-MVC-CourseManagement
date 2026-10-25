@@ -1,0 +1,13 @@
+﻿
+<h4>Add new Course </h4>
+
+@using (Html.BeginForm("InsertCourse", "Course", FormMethod.Post))
+{
+    <label for="fname">Course name</label>
+    <input type="text" name="courseName">  
+    <label for="lname">Available</label>
+    <input type="checkbox" name="isAvailable" value="true">
+    <br />
+    <input type="submit" value="Add course" class="button" />
+
+}

@@ -1,0 +1,58 @@
+﻿
+@model List<Sarah10415_MVC.Models.Course>
+
+@Styles.Render("~/MyDesign")
+
+@foreach (var course in Model)
+{
+
+    <div class="container">
+
+        <div id="products" class="row list-group">
+
+
+            <div class="item  col-xs-4 col-lg-4">
+                <div class="thumbnail">
+                    @*<img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />*@
+                    <div class="caption">
+                        <h4 class="group inner list-group-item-heading">
+                            @course.courseName
+                        </h4>
+                        <p class="group inner list-group-item-text">
+                            @course.isAvailable
+                        </p>
+                        <div class="row">
+                          
+                            <br />
+                            <br />
+                            <div class="col-xs-12 col-md-12">
+
+                                <a class="btn btn-info" href="/Course/GetDetails/@course.courseID">Details</a>
+
+                                <a class="btn btn-primary" href="/Course/UpdateCourse/@course.courseID">Update</a>
+
+                                <a class="btn btn-warning" href="/Course/DeleteCourse/@course.courseID"
+                                   onclick="return confirm('Are you sure you want to delete it ?');">Delete</a>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+}
+
+
+
+
+
+
+
+
