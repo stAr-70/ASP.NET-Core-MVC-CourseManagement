@@ -1,4 +1,4 @@
-# 🚀 ASP.NET Core MVC Web Application
+# ASP.NET Core MVC Web Application
 
 ---
 
@@ -21,3 +21,6 @@ A robust web application built using **ASP.NET Core MVC** and **Entity Framework
 * **Language:** C#
 * **Database & ORM:** SQL Server, Entity Framework Core
 * **Frontend:** HTML5, CSS3, Bootstrap, JavaScript
+
+<img width="1208" height="1879" alt="image" src="https://github.com/user-attachments/assets/a48050b9-10b4-490e-9648-3f85af7fd7d9" />
+<img width="1052" height="1847" alt="image" src="https://github.com/user-attachments/assets/45a66aeb-914c-48a1-8986-627f02311958" />
